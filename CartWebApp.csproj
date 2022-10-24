@@ -6,12 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="ReadMe.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="ReadMe.txt" />
-  </ItemGroup>
-
 </Project>
