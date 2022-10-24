@@ -1,0 +1,35 @@
+[
+  {
+    "Id": 1,
+    "CartRuleId": 1,
+    "IsFlatOffPercentage": true,
+    "FlatOffDiscountPercentage": 10,
+    "IsBuyProductFlatOffPercentage": false,
+    "BuyProductFlatOffDiscountPercentage": 0,
+    "PrimeProductId": 0,
+    "DependentProductId": 0,
+    "NthNumber": 0
+  },
+  {
+    "Id": 2,
+    "CartRuleId": 2,
+    "IsFlatOffPercentage": false,
+    "FlatOffDiscountPercentage": 0,
+    "IsBuyProductFlatOffPercentage": true,
+    "BuyProductFlatOffDiscountPercentage": 10,
+    "PrimeProductId": 2,
+    "DependentProductId": 3,
+    "NthNumber": 0
+  },
+  {
+    "Id": 3,
+    "CartRuleId": 3,
+    "IsFlatOffPercentage": false,
+    "FlatOffDiscountPercentage": 0,
+    "IsBuyProductFlatOffPercentage": false,
+    "BuyProductFlatOffDiscountPercentage": 0,
+    "PrimeProductId": 4,
+    "DependentProductId": 0,
+    "NthNumber": 5
+  }
+]

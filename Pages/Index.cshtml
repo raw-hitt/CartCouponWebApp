@@ -1,0 +1,135 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    table, tr, th, td {
+        border: 1px solid;
+    }
+</style>
+
+
+<table>
+    <tr>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Price/Item</th>
+        <th>Total</th>
+    </tr>
+    @{
+        double val = 0;
+        double total = 0;
+    }
+    @foreach (var obj in (List<productCartVM>)ViewData["CartProducts"])
+    {
+        <tr>
+            <td>
+                @obj.ProductName
+            </td>
+            <td>
+                @obj.Quntity
+            </td>
+            <td>
+                @obj.Price
+            </td>
+            <td>
+                @{
+                    double i = @Convert.ToDouble(@obj.Quntity * @obj.Price);
+                }
+
+                @i
+
+
+                @{
+                    total = @Convert.ToDouble(@val = @val + @i);
+                }
+
+            </td>
+        </tr>
+    }
+    <tr>
+        <td><b>Total</b></td>
+        <td></td>
+        <td></td>
+        <td><b>@total</b></td>
+    </tr>
+
+</table>
+<form method="post">
+    <div>
+        Enter couponcode:
+        <input asp-for="coupon" class="form-control" style="width:200px" />
+        <button type="submit">Submit Coupon</button>
+    </div>
+</form>
+
+
+@{
+    string message = "";
+    if (ViewData["DiscountedPrice"] != null)
+    {
+        if (ViewData["DiscountedPrice"].ToString() == "0")
+        {
+            message = "coupon code invalid";
+        }
+        else
+        {
+            message = "Discount after applying coupon is " + ViewData["DiscountedPrice"].ToString();
+        }
+    }
+}
+
+@message
+
+
+
+<div style="margin-top:50px">
+    <ul>
+        <li>
+            Type-1:
+
+            <bold>coupon code: <span style="font-size:21px;color:red">TenPercOff</span></bold>
+            <br/>
+            Here 10% discount is given you can change the discount % in  CouponRule.json file
+            for data with id=1 in column "FlatOffDiscountPercentage"
+        </li>
+        <li>
+            Type-2:
+            <bold>coupon code: <span style="font-size:21px;color:red">OffOnProduct</span></bold>
+            <br />
+            Here the you can change the  product and offer productId in  CouponRule.json file
+            where  "PrimeProductId" will be the product and
+            "DependentProductId": will be the offer product, for data with id=2.
+            <br/>
+            for productId please refer Product.Json file
+
+            <br/>
+             Here 10% discount is given you can change the discount in "BuyProductFlatOffDiscountPercentage" column in the same
+
+        </li>
+        <li>
+            Type-3:
+            <bold>coupon code: <span style="font-size:21px;color:red">OffOnNthProduct</span></bold>
+
+            <br />
+            here the discount is on every 5th product, you can change the nth number in CouponRule.json file
+            data with id=3, in the column 'NthNumber'
+        </li>
+    </ul>
+    <div>
+        <ul style="color:blue">
+            <li>
+                you can also change the product Quantity  in MyCart.json file
+            </li>
+            <li>
+                also you can change the product prices in Product.json
+            </li>
+            <li>
+                If coupon code is ivalid, it will show a message for the same
+            </li>
+        </ul>
+
+    </div>
+
+</div>

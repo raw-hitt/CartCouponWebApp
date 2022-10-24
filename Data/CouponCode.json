@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 1,
+    "CouponRuleId": 1,
+    "CouponCode": "TenPercOff"
+  },
+  {
+    "Id": 2,
+    "CouponRuleId": 2,
+    "CouponCode": "OffOnProduct"
+  },
+  {
+    "Id": 3,
+    "CouponRuleId": 3,
+    "CouponCode": "OffOnNthProduct"
+  }
+
+]

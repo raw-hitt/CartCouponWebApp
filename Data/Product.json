@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "ProductName": "Shirt",
+    "CategoryName": "Shirt",
+    "Price": 1000
+  },
+  {
+    "Id": 2,
+    "ProductName": "Trousers",
+    "CategoryName": "Trousers",
+    "Price": 2000
+  },
+  {
+    "Id": 3,
+    "ProductName": "Shoes",
+    "CategoryName": "Shoes",
+    "Price": 3000
+  },
+  {
+    "Id": 4,
+    "ProductName": "Ties",
+    "CategoryName": "Ties",
+    "Price": 1000
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Id": 1,
+    "RuleName": "flat_off_percentage",
+    "Description": "Flat off on an order"
+  },
+  {
+    "Id": 2,
+    "RuleName": "buy_product_get_off_percentage",
+    "Description": "buy a and off for particular product"
+  },
+  {
+    "Id": 3,
+    "RuleName": "off_on_nth_product",
+    "Description": "off on nth product"
+  }
+]
